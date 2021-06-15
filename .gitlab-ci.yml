@@ -1,0 +1,31 @@
+---
+stages:
+  - test
+  - prod
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+
+build-test-deploy-testnet:
+  script:
+    - yarn install
+    - yarn build:prod
+    - rsync -e "ssh -o StrictHostKeyChecking=no" -avz build/ root@ow3ns.test.facings.io:/var/www/ow3ns-sales-ui
+  artifacts:
+    paths:
+      - build/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "testnet"'
+
+build-test-deploy-mainnet:
+  script:
+    - yarn install
+    - yarn build:prod
+    - rsync -e "ssh -o StrictHostKeyChecking=no" -avz build/ root@owens.app:/var/www/ow3ns-sales-ui
+  stage: prod
+  artifacts:
+    paths:
+      - build/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

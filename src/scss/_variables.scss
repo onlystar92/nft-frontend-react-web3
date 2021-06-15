@@ -1,0 +1,30 @@
+// Colors
+$primary-color: #db3832;
+$dark-primary-color: darken($primary-color, 30%);
+$low-brightness-primary-color: #2c2620;
+
+$dark-grey: #1b1b1b;
+$medium-grey: #27262b;
+
+$typography-headline: rgba(#ffffff, 0.9);
+$typography-body: rgba(#ffffff, 0.9);
+$typography-tiny: rgba(#ffffff, 0.8);
+
+// Spacing (padding and margin)
+$spacing-xxxs: 4px;
+$spacing-xxs: 8px;
+$spacing-xs: 16px;
+$spacing-s: 24px;
+$spacing-m: 32px;
+$spacing-l: 40px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+$spacing-xxxl: 80px;
+
+$max-screen-width: 1440px;
+$menu-height-mobile: 102px;
+$menu-height-tablet-landscape-up: 78px;
+$footer-height-tablet-landscape-up: 129px;
+$footer-height-mobile: 266px;
+
+$border-radius: 8px;

@@ -1,0 +1,121 @@
+@import '../scss/variables';
+@import '../scss/responsiveness';
+
+.header {
+    background-color: #040405;
+    z-index: 99999;
+    border: none;
+    padding: 5px;
+
+    &__logo {
+        img {
+            height: 25px;
+            @include breakpoint(large-mobile-up) {
+                height: 44px;
+            }
+            @include breakpoint(tablet-landscape-up) {
+                height: 44px;
+            }
+        }
+    }
+    &__toggleButton {
+        border: none !important;
+        outline: none !important;
+        padding: 0;
+
+
+    }
+    &__collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(tablet-landscape-up) {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
+    &__link {
+        color: $typography-body;
+        text-transform: uppercase;
+        position: relative;
+
+        margin: $spacing-s 0 0 0;
+
+        &:last-of-type {
+            margin: $spacing-s 0;
+        }
+
+        @include breakpoint(tablet-landscape-up) {
+            margin: 0 $spacing-l 0 0;
+
+            &:last-of-type {
+                margin: 0 $spacing-l 0 0;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            width: 0px;
+            height: 4px;
+            margin: 4px 0 0;
+            transition: 0.3s ease-in-out;
+            transition-duration: 0.75s;
+            opacity: 0;
+            background-color: $primary-color;
+        }
+        &::before {
+            left: 50%;
+        }
+        &::after {
+            right: 50%;
+        }
+        &:hover,
+        &--active {
+            color: $typography-headline;
+
+            &::before,
+            &::after {
+                width: 50%;
+                opacity: 1;
+            }
+        }
+
+        &--active {
+            .header__link::before,
+            .header__link::after {
+                width: 50%;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.navbar-toggler-icon {
+    height: 44px;
+    min-width: 44px;
+    //background-image: url('../images/Header/hamburguer.svg');
+    background-color: #db3832 !important;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 44px;
+    margin-bottom: 0;
+}
+.mw80{
+    max-width: 80%;
+    margin: auto;
+}
+.loginBtn{
+    margin-top: 5px;
+    border: 1px solid white;
+    color:#53C2FA !important;
+    padding: 10px 35px;
+}
+.p25{
+    padding: 25px;
+}

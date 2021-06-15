@@ -1,0 +1,898 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNovaThin.otf') format('opentype');
+    src: url('../fonts/ProximaNovaSemibold.otf') format('opentype');
+    src: url('../fonts/ProximaNovaBlack.otf') format('opentype'),
+    url('../fonts/ProximaNovaBold.otf') format('opentype'),
+    url('../fonts/ProximaNovaExtrabold.otf') format('opentype');
+    src: url('../fonts/ProximaNovaRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.paddingUnset {
+    padding-left: 0px;
+
+}
+
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+​
+.main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+​
+.footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+​
+.footer img {
+    margin-left: 0.5rem;
+}
+
+​
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+​
+.title a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+​
+.title a:hover,
+.title a:focus,
+.title a:active {
+    text-decoration: underline;
+}
+
+​
+.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+}
+
+​
+.title,
+.description {
+    text-align: center;
+}
+
+​
+.description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+​
+.code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+​
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-top: 3rem;
+}
+
+​
+.card {
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+​
+.card:hover,
+.card:focus,
+.card:active {
+    color: #0070f3;
+    border-color: #0070f3;
+}
+
+​
+.card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+​
+.card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+​
+.logo {
+    height: 1em;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.loginBtn {
+    font-family: Proxima Nova;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: right;
+    color: white;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.bgBlack {
+    background: #040405;
+}
+
+.mainLogo {
+    float: right;
+}
+
+.headerloginBlock {
+    margin: 20px auto;
+}
+
+.headerMain {
+    padding: 30px 0px 30px 0px;
+}
+
+.loginText {
+    border: 1px solid white;
+    padding: 8px 20px 8px 20px;
+    color: #0369B1;
+    text-decoration: none !important;
+}
+
+.mainHeading {
+    font-family: Proxima Nova;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.mainePara {
+    font-family: Proxima Nova;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.countDownPara {
+    font-family: Proxima Nova;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+
+.counntValue {
+    font-family: Proxima Nova;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.daysCounntValue {
+    color: #56C3FB;
+}
+
+.hourCounntValue {
+    color: #9D69F7;
+}
+
+.minuteCounntValue {
+    color: #FCD369;
+}
+
+.secondCounntValue {
+    color: #DE68A4;
+}
+
+.countText {
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.borderCountblock {
+    /*float: right;*/
+    /*margin: 20px 40px 20px 20px;*/
+}
+
+.countFullBlock {
+    margin-left: 0px;
+    padding: 10px 10px 0px 10px;
+}
+
+.countFullBlockText {
+    margin-top: -20px;
+    padding: 5px 20px 0px 20px;
+}
+
+.cardHeading {
+    font-family: Proxima Nova;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-bottom: 26px;
+}
+
+.cardSubHeading {
+    font-family: Proxima Nova;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-bottom: -5px;
+}
+
+.seriesText {
+    font-family: Proxima Nova;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.cardCountValue {
+    font-family: Proxima Nova;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.cardCountHeading {
+    font-family: Proxima Nova;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-top: 25px !important;
+    margin-bottom: -1px;
+}
+
+.releaseDateHeading {
+    font-family: Proxima Nova;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-bottom: -3px;
+    text-transform: uppercase;
+}
+
+.releaseDateValue {
+    font-family: Proxima Nova;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #fcd369;
+
+}
+
+.costHeading {
+    font-family: Proxima Nova;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: white;
+    margin-top: 25px !important;
+    margin-bottom: -1px;
+}
+
+.costValue {
+    font-family: Proxima Nova;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: white;
+}
+
+.singleRowCard,.hoverGrid {
+    background: #25282D;
+    margin: 30px 0px 30px 0px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    height: 445px;
+}
+
+.cardInsideAlltext {
+    margin: 15px 5px 15px 5px;
+}
+
+.footerListBlock li {
+    list-style-type: none;
+}
+
+.footerListBlock li a {
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.footerHeading {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.footerBio {
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F2F2F2;
+
+}
+
+.footerSection {
+    background: #25282D;
+    padding: 40px;
+}
+
+
+@media (max-width: 600px) {
+    .counntValue {
+        font-size: 20px;
+    }
+
+    .cardInsideAlltext {
+        margin: 30px 25px 25px 25px;
+    }
+}
+
+fieldset.schedulerborder {
+    border: 2px groove white !important;
+    /*padding: 0 1.4em 1.4em 1.4em !important;*/
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+
+.sideParaText {
+    font-family: Proxima Nova;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin: 40px -20px -41px -50px;
+}
+
+.cardInsideImage {
+    width: 100%;
+}
+
+.cardInsideImage {
+    width: 179px;
+}
+
+.cardInsideLoginBtn {
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #53C2FA;
+    background: #25282D;
+    border: 1px solid white;
+    padding: 5px 50px 5px 50px;
+    margin-top: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .countFullBlock {
+        padding: 20px 10px 0px 10px;
+    }
+
+    .paddingUnset {
+        padding-left: 15px;
+
+    }
+
+    .cardInsideImage {
+        width: 179px;
+    }
+
+    .borderCountblock {
+        margin: unset;
+    }
+
+    .sideParaText {
+        margin: 10px 20px 10px 20px;
+    }
+
+    .cardInsideImage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textCenterSm {
+        text-align: center;
+    }
+
+    .releaseDateValue {
+        font-size: 19px;
+    }
+
+    .seriesText {
+        font-size: 19px;
+    }
+
+    .mainLogo {
+        margin-top: -15px;
+    }
+
+    .mainLogo {
+        margin: -15px 0px 0px 0px;
+        float: unset;
+    }
+
+    .mainLogo {
+        margin-top: -15px;
+    }
+
+    .countDownPara {
+        font-size: 19px;
+        width: 60%;
+    }
+
+    .cardInsideLoginBtn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .costHeading {
+        margin-top: 40px !important;
+        margin-bottom: -1px;
+    }
+
+}
+
+.loginText {
+    text-decoration: none;
+}
+
+.loginText:hover {
+    text-decoration: none;
+}
+
+.colorBlue {
+    font-family: Proxima Nova;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #53C2FA;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .cardInsideImage {
+        width: 160px;
+    }
+
+    .countDownPara {
+        width: 60%;
+    }
+
+    .seriesText {
+        font-size: 17px;
+    }
+
+    .cardCountValue {
+        font-size: 19px;
+    }
+
+    .releaseDateHeading {
+        font-family: Proxima Nova;
+        font-size: 12px;
+    }
+
+    .releaseDateValue {
+        font-family: Proxima Nova;
+        font-size: 19px;
+    }
+
+    .costValue {
+        font-family: Proxima Nova;
+        font-size: 19px
+    }
+
+    .cardHeading {
+        font-family: Proxima Nova;
+        font-size: 23px;
+    }
+
+    .costHeading {
+        margin-top: 38px !important;
+        margin-bottom: -1px;
+    }
+
+    .counntValue {
+        font-size: 30px;
+    }
+
+    .cardInsideLoginBtn {
+        isplay: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .cardInsideImage {
+        width: 130px;
+    }
+
+    .seriesText {
+        font-size: 19px;
+    }
+
+    .cardCountValue {
+        font-size: 17px;
+    }
+
+    .releaseDateHeading {
+        font-family: Proxima Nova;
+        font-size: 9px;
+    }
+
+    .releaseDateValue {
+        font-family: Proxima Nova;
+        font-size: 15px;
+    }
+
+    .costValue {
+        font-family: Proxima Nova;
+        font-size: 17px
+    }
+
+    .cardHeading {
+        font-family: Proxima Nova;
+        font-size: 17px;
+    }
+
+    .costHeading {
+        margin-top: 57px !important;
+        margin-bottom: -1px;
+    }
+
+    .counntValue {
+        font-size: 30px;
+    }
+
+    .singleRowCard {
+        background: #25282D;
+        margin: 30px 0px 30px 0px;
+        padding: 20px 10px 20px 11px;
+    }
+
+    .cardCountHeading {
+        margin-top: 35px !important;
+
+    }
+
+    .cardInsideAlltext {
+        margin: 0px 5px 15px 5px;
+    }
+
+    .sideParaText {
+        font-size: 17px;
+        margin: 50px -20px -41px -50px;
+    }
+
+    .countDownPara {
+        width: 60%;
+    }
+}
+
+.footerSection {
+    margin-top: 30px;
+}
+
+.telegramColor {
+    color: #2FA7E3;
+
+}
+
+.instagramColor {
+    color: #ce0c0c;
+}
+
+.twitterColor {
+    color: #03A9F4;
+}
+
+.facebookColor {
+    color: #3B5999;
+}
+
+.paddingUnset2 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media only screen and (max-width: 360px) {
+    .seriesText {
+        font-size: 16px;
+    }
+
+    .cardCountValue, .releaseDateValue, .costValue {
+        font-size: 16px;
+    }
+}
+.container{
+    min-height: 0;
+}
+.logoImage{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.hoverGrid{
+    margin: 45px 0;
+    padding: 45px;
+    display: none;
+}
+.cardHoverHeading{
+    color: white;
+    font-size: 20px;
+}
+.packMainBox{
+    margin-bottom: 5px;
+}
+.cardInsideImage img:hover .hoverGrid{
+    display: block;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.expiredTime{
+    font-size: 25px;
+    font-weight: 600;
+}
+.centreHeading{
+    font-family: Proxima Nova;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.centreBoxSubHeading{
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.centreBoxPara{
+    font-family: Proxima Nova;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #B725CD;
+    margin-top: -10px;
+}
+.width100{
+    width: 100%;
+}
+.importentDateBox{
+    border-top: 1.5px solid #9D69F7;
+    border-left: 1px solid #768573;
+    border-bottom:1px solid #768573;
+    border-right:1px solid #768573;
+    padding: 20px 0px 20px 0px;
+    background: #111111;
+
+}
+.orrangeColor{
+    color: #FCD369;
+}
+
+.borderTopOrrange{
+
+    border-top: 1.5px solid #FCD369;
+}
+section.secondCentreBox.bgBlack {
+    margin-top: 30px;
+}
+.pinkColor{
+    color: #DE68A4;
+}
+.borderTopPink{
+    border-top: 1.5px solid #DE68A4;
+}
+section.chanceToGateCentreBox.bgBlack {
+    margin-top: 30px;
+}
+
+   .blueBorderTop{
+       border-top: 1.5px solid #00AEF6;
+}
+.probabilitiesOnUnpackingBlock {
+    margin-top: 30px;
+}
+.colorSkyBlueText{
+color: #00AEF6;
+}
+.centreParaFullwidh{
+    font-family: Proxima Nova;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    color: white;
+    text-align: center;
+}
+.centreParaFullwidh{
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+.margin-for-header {
+    background: black;
+}
+section.firstCentreBox.bgBlack {
+    margin-top: 32px;
+    margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+    .centreParaFullwidh{
+        font-size: 17px;
+        text-align: center;
+    }
+    .centreBoxPara{
+        font-size: 19px;
+    }
+    .centreHeading {
+        font-family: Proxima Nova;
+        font-size: 22px;
+    }
+    .singleRowCard{
+        height: unset;
+    }
+}

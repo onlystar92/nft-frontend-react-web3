@@ -1,0 +1,84 @@
+@import '../variables';
+@import '../typography';
+@import '../responsiveness';
+
+.button {
+    @include p--bold;
+    border-radius: $border-radius;
+    padding: 10px $spacing-s; //guarantees height of 44px at least
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+
+    text-transform: uppercase;
+
+    @include breakpoint(desktop-up) {
+        padding: $spacing-xxs $spacing-s;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    &--primary {
+        background-color: rgba($dark-primary-color, 0.9);
+        border: 1px solid rgba($dark-primary-color, 0.9);
+        color: $typography-body;
+
+        &:hover {
+            background-color: rgba($dark-primary-color, 1);
+            border: 1px solid rgba($dark-primary-color, 1);
+            color: $typography-headline;
+        }
+
+        &:disabled {
+            &:hover {
+                background-color: rgba($dark-primary-color, 0.8);
+                color: $typography-body;
+            }
+        }
+    }
+    &--secondary {
+        color: $typography-body;
+        background-color: transparent;
+        border: 1px solid $dark-primary-color;
+        &:hover {
+            background-color: rgba($dark-primary-color, 0.15);
+            color: $typography-headline;
+        }
+        &:active {
+            background-color: rgba($dark-primary-color, 0.2);
+            color: $typography-body;
+        }
+        &:disabled {
+            &:hover {
+                color: $typography-body;
+                background-color: transparent;
+            }
+        }
+    }
+    &--text {
+        color: $typography-body;
+        background-color: transparent;
+        border: none;
+        &:hover,
+        &:active {
+            text-decoration: underline;
+            text-decoration-color: $dark-primary-color;
+            color: $typography-headline;
+        }
+        &:disabled {
+            &:hover {
+                color: $typography-body;
+                background-color: transparent;
+            }
+        }
+    }
+}

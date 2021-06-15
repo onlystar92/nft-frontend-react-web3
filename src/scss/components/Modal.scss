@@ -1,0 +1,44 @@
+@import '../variables';
+@import '../typography';
+
+.customModal {
+    .modal-content {
+        border-radius: calc(#{$border-radius} + 5px);
+        background-color: $medium-grey;
+        padding: $spacing-s;
+        overflow-y: scroll;
+        max-height: calc(100vh - #{$menu-height-mobile} - #{$footer-height-mobile});
+
+        scrollbar-width: 0;
+
+        @include breakpoint(tablet-up) {
+            max-height: calc(100vh - #{$menu-height-tablet-landscape-up} - #{$footer-height-tablet-landscape-up});
+        }
+    }
+    .modal-header {
+        border: none;
+    }
+    .modal-title {
+        @include h3;
+    }
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: $border-radius;
+
+        @include breakpoint(large-mobile-up) {
+            justify-content: flex-end;
+        }
+    }
+}
+.unpackModal .modal-content{
+    max-height: 100%;
+    overflow-y: hidden;
+}

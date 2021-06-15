@@ -1,0 +1,22 @@
+@import './variables';
+
+@mixin horizontalPadding {
+    padding-right: $spacing-s !important;
+    padding-left: $spacing-s !important;
+}
+
+@mixin verticalPadding {
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
+    @include breakpoint(tablet-up) {
+        padding-top: $spacing-xxl;
+        padding-bottom: $spacing-xxl;
+    }
+}
+
+@mixin minPageHeight {
+    min-height: calc(100vh - #{$menu-height-mobile} - #{$footer-height-mobile} + 48px);
+    @include breakpoint(tablet-landscape-up) {
+        min-height: calc(100vh - #{$menu-height-tablet-landscape-up} - #{$footer-height-tablet-landscape-up} + 48px);
+    }
+}
