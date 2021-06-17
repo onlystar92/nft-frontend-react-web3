@@ -2,10 +2,6 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
-import './Header.scss';
-import '../scss/components/Button.scss';
-import '../scss/components/Dropdown.scss';
-// import logo from '../images/packs/Logo.png'
 
 
 function RenderHeader(props) {
