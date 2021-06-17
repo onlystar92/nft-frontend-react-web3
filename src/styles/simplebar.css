@@ -221,3 +221,7 @@
 [data-simplebar].navigation-widget .simplebar-scrollbar {
     right: 4px;
 }
+.mw90{
+    max-width: 90% !important;
+    margin: auto;
+}

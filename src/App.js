@@ -5,9 +5,8 @@ import './App.scss';
 import './styles/styles.css'
 import './styles/simplebar.css'
 import './styles/tiny-slider.css'
-import RenderHeader from './partials/Header.js';
-import CricketPacks from "./partials/CricketPacks.js";
 import Skills from "./partials/skills";
+import LoginPage from "./pages/LoginPage";
 
 
 export default function App(props) {
@@ -37,7 +36,7 @@ export default function App(props) {
         <div className="App">
             {props.ual.activeUser ?
                 <>
-                   {/* <RenderHeader
+                    {/* <RenderHeader
                         showModal={props.ual.showModal}
                         accountName={props.ual.activeUser.accountName}
                         activeUser={props.ual.activeUser}
@@ -47,8 +46,8 @@ export default function App(props) {
                     <main className="margin-for-header">
                         <Routes>
 
-                            <Route path="/" element={<CricketPacks user={props.ual.activeUser}
-                                                                   showModal={props.ual.showModal}/>}/>
+                            <Route path="/" element={<Skills user={props.ual.activeUser}
+                                                             showModal={props.ual.showModal}/>}/>
 
                         </Routes>
                     </main>
@@ -59,7 +58,7 @@ export default function App(props) {
                     {/*<RenderHeader showModal={props.ual.showModal}/>*/}
                     <main className="margin-for-header">
                         <Routes>
-                            <Route path="/" element={<Skills showModal={props.ual.showModal}/>}/>
+                            <Route path="/" element={<LoginPage showModal={props.ual.showModal}/>}/>
                         </Routes>
 
                     </main>
