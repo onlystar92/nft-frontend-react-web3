@@ -1,5 +1,5 @@
 {
-  "name": "bernie.topps-sales-ui",
+  "name": "gnocity",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3000",
@@ -32,7 +32,7 @@
     "ual-scatter": "^0.3.0"
   },
   "scripts": {
-    "start": "env-cmd -f .env.prod react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "build:test": "env-cmd -f .env.test react-scripts build",
     "build:prod": "env-cmd -f .env.prod react-scripts build",
