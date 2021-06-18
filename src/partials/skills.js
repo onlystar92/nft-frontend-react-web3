@@ -4,7 +4,7 @@ import signTransaction from "../transactionSigner";
 
 const Skills = (props) => {
 
-    const [data, setData] = useState([])
+
     const [skillsCards, setSkillsCards] = useState([])
     const [gnomeCards, setGnomeCards] = useState([])
     const [skillId, setSkillId] = useState('')
@@ -17,7 +17,6 @@ const Skills = (props) => {
         axios.get(apiUrl).then((res) => {
             console.log('response', res.data.data)
             const cards = res.data.data
-            setData(cards)
             const skillsCardsFromData = cards.filter((key) => {
                 return (key.name.search("Skill") >= 1)
             })
@@ -64,6 +63,7 @@ const Skills = (props) => {
 
     useEffect(() => {
         getAllCards()
+        // eslint-disable-next-line
     }, [props.user.accountName])
 
 
