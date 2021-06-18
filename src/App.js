@@ -36,13 +36,13 @@ export default function App(props) {
         <div className="App">
             {props.ual.activeUser ?
                 <>
-                    {/* <RenderHeader
+                     <RenderHeader
                         showModal={props.ual.showModal}
                         accountName={props.ual.activeUser.accountName}
                         activeUser={props.ual.activeUser}
                         activeAuthenticator={props.ual.activeAuthenticator}
                         logout={props.ual.logout}
-                    />*/}
+                    />
                     <main className="margin-for-header">
                         <Routes>
 
